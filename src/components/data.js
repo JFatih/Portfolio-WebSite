@@ -9,7 +9,7 @@ export const data = {
     },
     skills: {
       title: "Skills",
-      skills: {
+      programmes: {
         javascript: {
           name: "JAVASCRIPT",
           image: "../../src/assets/Programme/Javascript.png",
@@ -27,14 +27,15 @@ export const data = {
     profile: {
       baseInfo: {
         title: "Basic Information",
-        birthTitle: "Birth Date",
-        birthValue: "23.02.1997",
-        cityTitle: "City of residence",
-        cityKey: "İzmir",
-        eduTitle: "Education",
-        eduKey: "Süleyman Demirel Ünv. İnşaat Müh. 2022",
-        preTitle: "Preferred Role",
-        preKey: "Frontend, UI",
+        data: {
+          birthDate: { name: "Birth Date", value: "23.02.1997" },
+          city: { name: "City of residence", value: "İzmir" },
+          education: {
+            name: "Education",
+            value: "Süleyman Demirel Ünv. İnşaat Müh. 2022",
+          },
+          preRole: { preTitle: "Preferred Role", preKey: "Frontend, UI" },
+        },
       },
       aboutMe: {
         title: "About me",

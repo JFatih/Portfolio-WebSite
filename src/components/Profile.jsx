@@ -1,9 +1,10 @@
+import Ellipse2 from "../assets/Ellipse2.svg";
+import { data } from "./data";
+
 function Profile() {
   return (
     <>
-      <section className="w-screen bg-[#F4F4F4]">
-        <p className="text-2xl text-red-600 text-center">Profile</p>
-      </section>
+      <section className="w-screen bg-[#F4F4F4] overflow-hidden relative"></section>
     </>
   );
 }
