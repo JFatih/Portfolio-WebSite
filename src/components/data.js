@@ -25,6 +25,7 @@ export const data = {
       },
     },
     profile: {
+      mainTitle: "Profile",
       baseInfo: {
         title: "Basic Information",
         data: {
@@ -34,13 +35,15 @@ export const data = {
             name: "Education",
             value: "Süleyman Demirel Ünv. İnşaat Müh. 2022",
           },
-          preRole: { preTitle: "Preferred Role", preKey: "Frontend, UI" },
+          preRole: { name: "Preferred Role", value: "Frontend, UI" },
         },
       },
       aboutMe: {
         title: "About me",
-        description:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.          Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam! ",
+        description1:
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+        description2:
+          "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
       },
     },
     projects: {

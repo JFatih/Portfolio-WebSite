@@ -11,7 +11,7 @@ function Skills() {
           src={Ellipse}
         />
         <img
-          className="absolute w-[120px] bottom-[-90px] right-[-15px]"
+          className="absolute w-[120px] bottom-[-90px] right-[-35px]"
           src={Ellipse2}
         />
         <span className="absolute border w-[218px] h-[60px] bg-[#525252] rounded-full left-[-100px] bottom-[50px]"></span>
