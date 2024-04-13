@@ -47,28 +47,50 @@ export const data = {
       },
     },
     projects: {
-      base1: {
-        title: "Random Jokes",
-        des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-        prog: ["react", "vercel", "axios", "router"],
-        link1: "View on Github",
-        link2: "Go to app",
-      },
-      base2: {
-        title: "Are you bored",
-        des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
-        prog: ["react", "redux", "axios", "router", "vercel"],
-        link1: "View on Github",
-        link2: "Go to app",
+      mainTitle: "Projects",
+      section: {
+        base1: {
+          baseColor: "bg-[#DDEEFE]",
+          title: "Random Jokes",
+          des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+          prog: ["react", "vercel", "axios", "router"],
+          link: {
+            github: {
+              name: "View on Github",
+              url: "https://github.com/JFatih?tab=repositories",
+            },
+            app: { name: "Go to app", url: "xyz.com" },
+          },
+          image: "../../src/assets/laptop1.png",
+        },
+        base2: {
+          baseColor: "bg-[#D9F6F1]",
+          title: "Are you bored",
+          des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+          prog: ["react", "redux", "axios", "router", "vercel"],
+          link: {
+            github: { name: "View on Github", url: "" },
+            app: { name: "Go to app", url: "xyz.com" },
+          },
+          image: "../../src/assets/laptop2.png",
+        },
       },
     },
     footer: {
       title: "Let's work together on your next product.",
       accounts: {
-        github: { name: "Github", link: "xyz.com" },
-        personalBlog: { name: "Personal Blog", link: "xyz.com" },
-        linkedin: { name: "Linkedin", link: "xyz.com" },
-        email: { name: "email", link: "xyz.com" },
+        github: { name: "Github", link: "xyz.com", color: "text-[#1769FF]" },
+        personalBlog: {
+          name: "Personal Blog",
+          link: "xyz.com",
+          color: "text-[#0A0A14]",
+        },
+        linkedin: {
+          name: "Linkedin",
+          link: "xyz.com",
+          color: "text-[#0077B5]",
+        },
+        email: { name: "email", link: "xyz.com", color: "text-[#AF0C48]" },
       },
     },
   },
