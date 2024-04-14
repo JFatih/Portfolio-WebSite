@@ -1,16 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { data } from "./data";
+import { data } from "../mocks/data";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 function Projects() {
   return (
-    <section className="w-screen bg-white overflow-hidden relative">
+    <section className="w-screen bg-white overflow-hidden relative dark:bg-[#484148] dark:text-white">
       <header>
         <h1 className="text-[36px] my-[50px] font-medium">
           {data.en.projects.mainTitle}
         </h1>
       </header>
-      <article className="w-4/6 mx-auto flex justify-between gap-5">
+      <article className="w-4/6 mx-auto flex justify-between gap-5 [&>*:nth-child(1)]:bg-[#DDEEFE] [&>*:nth-child(2)]:bg-[#D9F6F1] dark:[&>*:nth-child(1)]:bg-[#2D3235] dark:[&>*:nth-child(2)]:bg-[#495351]">
         {Object.values(data.en.projects.section).map((base) => {
           return (
             <div
@@ -24,7 +24,7 @@ function Projects() {
                   return (
                     <p
                       key={pr}
-                      className="border w-[82px] h-[32px] rounded-xl bg-white font-bold"
+                      className=" w-[82px] h-[32px] rounded-xl bg-white dark:bg-[#525252] font-bold"
                     >
                       {pr}
                     </p>

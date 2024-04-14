@@ -1,5 +1,6 @@
 export const data = {
   en: {
+    darkMode: { on: "DARK MODE", off: "LIGHT MODE" },
     hero: {
       title: "Hi!",
       description:
@@ -50,7 +51,6 @@ export const data = {
       mainTitle: "Projects",
       section: {
         base1: {
-          baseColor: "bg-[#DDEEFE]",
           title: "Random Jokes",
           des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
           prog: ["react", "vercel", "axios", "router"],
@@ -64,7 +64,6 @@ export const data = {
           image: "../../src/assets/laptop1.png",
         },
         base2: {
-          baseColor: "bg-[#D9F6F1]",
           title: "Are you bored",
           des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
           prog: ["react", "redux", "axios", "router", "vercel"],
@@ -79,18 +78,16 @@ export const data = {
     footer: {
       title: "Let's work together on your next product.",
       accounts: {
-        github: { name: "Github", link: "xyz.com", color: "text-[#1769FF]" },
+        github: { name: "Github", link: "xyz.com" },
         personalBlog: {
           name: "Personal Blog",
           link: "xyz.com",
-          color: "text-[#0A0A14]",
         },
         linkedin: {
           name: "Linkedin",
           link: "xyz.com",
-          color: "text-[#0077B5]",
         },
-        email: { name: "email", link: "xyz.com", color: "text-[#AF0C48]" },
+        email: { name: "Email", link: "xyz.com" },
       },
     },
   },

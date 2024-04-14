@@ -1,27 +1,29 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import Ellipse from "../assets/Ellipse.svg";
-import { data } from "./data";
+import { data } from "../mocks/data";
+import ModeSwitch from "./modeSwitch";
 
-function Introduce() {
+function BgHero({ toogleMode, darkMode }) {
   return (
-    <section className="w-screen bg-[#F4F4F4] overflow-hidden relative">
+    <section className="w-screen bg-[#F4F4F4] overflow-hidden relative dark:bg-[#2A262B]">
+      <ModeSwitch toogleMode={toogleMode} darkMode={darkMode} />
       <span className="absolute border-[55px] border-[#D9D9D9] rounded-full left-[471px] top-[-40px]"></span>
-      <span className="absolute border w-[218px] h-[60px] bg-secondColor rounded-full left-[1400px] top-[540px]"></span>
+      <span className="absolute w-[218px] h-[60px] bg-secondColor rounded-full left-[1400px] top-[540px]"></span>
       <img
         className="absolute w-[120px] bottom-[-60px] right-[350px]"
         src={Ellipse}
       />
-      <div className="w-8/12 flex justify-between items-center mx-auto ">
-        <div className="flex flex-col w-[610px] mt-[151px]">
-          <div className="flex flex-col items-start text-start relative">
-            <h2 className="text-[30px] text-[#000000] ">
+      <div className="w-8/12 flex justify-between items-center mx-auto dark:text-[#FFFFFF] mb-[100px]">
+        <div className="flex flex-col w-[610px] ">
+          <div className="flex flex-col items-start text-start relative ">
+            <h2 className="text-[30px] text-[#000000] dark:text-[#FFFFFF]">
               {data.en.hero.title} 👋
             </h2>
-            <h1 className="text-[42px] text-[#0A0A14] font-medium mt-3 relative z-50">
+            <h1 className="text-[42px] text-[#0A0A14] dark:text-[#FFFFFF] font-medium mt-3 relative z-50">
               {data.en.hero.description}
             </h1>
-            <span className="absolute border rounded-md w-[148px] h-[31px] bg-secondColor left-[-10px] top-[95px] z-0"></span>
+            <span className="absolute rounded-md w-[148px] h-[31px] bg-secondColor left-[-10px] top-[95px] z-0"></span>
           </div>
           <footer className="flex flex-col items-start my-10">
             <div className="flex gap-5">
@@ -45,4 +47,4 @@ function Introduce() {
   );
 }
 
-export default Introduce;
+export default BgHero;
