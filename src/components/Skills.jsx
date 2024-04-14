@@ -1,19 +1,13 @@
 import { data } from "../mocks/data";
-import Ellipse from "../assets/Ellipse.svg";
-import Ellipse2 from "../assets/Ellipse2.svg";
 
 function Skills() {
   return (
     <>
       <section className="w-screen bg-white overflow-hidden relative dark:bg-[#484148]">
-        <img
-          className="absolute w-[120px] top-[-60px] right-[350px]"
-          src={Ellipse}
-        />
-        <img
-          className="absolute w-[120px] bottom-[-90px] right-[-35px]"
-          src={Ellipse2}
-        />
+        <span className="absolute border-[60px] border-[#D9D9D9] dark:border-[#525252] rounded-full top-[-60px] right-[350px]"></span>
+        <span className="absolute border-[40px] border-white dark:border-[#484148] rounded-full top-[-40px] right-[370px]"></span>
+        <span className="absolute border-[60px] border-[#EA2678] dark:border-[#EA2678] rounded-full bottom-[-90px] right-[-35px]"></span>
+        <span className="absolute border-[40px] border-white dark:border-[#484148] rounded-full bottom-[-70px] right-[-15px]"></span>
         <span className="absolute w-[218px] h-[60px] bg-[#525252] rounded-full left-[-100px] bottom-[50px]"></span>
         <div>
           <p className="text-[48px] my-[50px] dark:text-[#F4F4F4]">

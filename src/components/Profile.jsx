@@ -1,13 +1,14 @@
-import Ellipse2 from "../assets/Ellipse2.svg";
 import { data } from "../mocks/data";
 
 function Profile() {
   return (
     <section className="w-screen bg-[#F4F4F4] overflow-hidden relative dark:bg-[#2A262B] dark:text-white">
-      <img
+      {/* <img
         className="absolute w-[120px] top-[-30px] right-[-35px]"
         src={Ellipse2}
-      />
+      /> */}
+      <span className="absolute border-[60px] border-[#EA2678] dark:border-[#EA2678] rounded-full top-[-30px] right-[-35px]"></span>
+      <span className="absolute border-[40px] border-[#F4F4F4] dark:border-[#2A262B] rounded-full top-[-10px] right-[-15px]"></span>
       <header>
         <p className="text-[36px] my-[50px] font-medium">
           {data.en.profile.mainTitle}

@@ -7,6 +7,11 @@ export const data = {
         "I’m Fatih. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!",
       subDescription:
         "Currently FreeLancing for UX, UI, & Web Design Project. Invite me to join your team -> cakmak.35f@gmail.com",
+      specialWords: [
+        "FreeLancing",
+        "UX, UI, & Web Design",
+        "cakmak.35f@gmail.com",
+      ],
     },
     skills: {
       title: "Skills",
