@@ -1,5 +1,4 @@
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import { data } from "../mocks/data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch, useSelector } from "react-redux";
 import { changeLanguage } from "../store/action/DataAction";
@@ -34,7 +33,9 @@ const ModeSwitch = ({ toogleMode, darkMode, navLan, changeLang }) => {
         </span>
       </label>
       {"|"}
-      <button onClick={languageHandler}>{language.name}</button>
+      <button onClick={languageHandler} className="text-[#777777]">
+        {language.name}
+      </button>
     </div>
   );
 };

@@ -6,7 +6,6 @@ import Skills from "./components/Skills";
 import Footer from "./components/footer";
 import useLocalStorage from "./hooks/useLocalStorage";
 import BgHero from "./components/BgHero";
-import { data } from "./mocks/data";
 
 const defaultMode = window.matchMedia("(prefers-color-scheme: dark").matches;
 
