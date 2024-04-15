@@ -1,18 +1,18 @@
 import { useState } from "react";
 
 export default function useLocalStorage(key, defaultValue) {
-  const [theme, setTheme] = useState(() => {
-    const storedTheme = JSON.parse(localStorage.getItem(key));
-    if (storedTheme === null) {
+  const [data, setData] = useState(() => {
+    const storedData = JSON.parse(localStorage.getItem(key));
+    if (storedData === null) {
       return defaultValue;
     } else {
-      return storedTheme;
+      return storedData;
     }
   });
 
-  const setLocalStorage = (newMode) => {
-    localStorage.setItem(key, JSON.stringify(newMode));
-    setTheme(newMode);
+  const setLocalStorage = (newData) => {
+    localStorage.setItem(key, JSON.stringify(newData));
+    setData(newData);
   };
-  return [theme, setLocalStorage];
+  return [data, setLocalStorage];
 }

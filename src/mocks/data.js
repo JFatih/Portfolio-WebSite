@@ -1,6 +1,7 @@
 export const data = {
   en: {
-    darkMode: { on: "DARK MODE", off: "LIGHT MODE" },
+    language: { name: "TÜRKÇE'YE GEÇ", changedata: "tr" },
+    darkMode1: { on: "DARK MODE", off: "LIGHT MODE" },
     hero: {
       title: "Hi!",
       description:
@@ -96,5 +97,102 @@ export const data = {
       },
     },
   },
-  tr: {},
+  tr: {
+    language: { name: "SWITCH TO ENGLISH", changedata: "en" },
+    darkMode1: { on: "KOYU TEMA", off: "AÇIK TEMA" },
+    hero: {
+      title: "Merhaba!",
+      description:
+        "Ben Fatih. Ben tam kapsamlı bir geliştiriciyim. Sağlam ve ölçeklenebilir ön uç ürünler üretebilirim. Haydi tanışalım!",
+      subDescription:
+        "Şu anda UX, UI ve Web Tasarımı Projesi için FreeLancing çalışıyorum. Beni ekibinize katılmaya davet edin -> cakmak.35f@gmail.com",
+      specialWords: [
+        "FreeLancing",
+        "UX, UI ve Web Tasarımı",
+        "cakmak.35f@gmail.com",
+      ],
+    },
+    skills: {
+      title: "Yetenekler",
+      programmes: {
+        javascript: {
+          name: "JAVASCRIPT",
+          image: "../../src/assets/Programme/Javascript.png",
+        },
+        react: { name: "REACT", image: "../../src/assets/Programme/REACT.png" },
+        redux: { name: "REDUX", image: "../../src/assets/Programme/REDUX.png" },
+        node: { name: "NODE", image: "../../src/assets/Programme/NODE.png" },
+        vsCode: {
+          name: "VS CODE",
+          image: "../../src/assets/Programme/VS-CODE.png",
+        },
+        figma: { name: "FIGMA", image: "../../src/assets/Programme/FIGMA.png" },
+      },
+    },
+    profile: {
+      mainTitle: "Profil",
+      baseInfo: {
+        title: "Temel Bilgiler",
+        data: {
+          birthDate: { name: "Doğum Tarihi", value: "23.02.1997" },
+          city: { name: "İkamet Şehri", value: "İzmir" },
+          education: {
+            name: "Eğitim",
+            value: "Süleyman Demirel Ünv. İnşaat Müh. 2022",
+          },
+          preRole: { name: "Tercih Edilen Rol", value: "Frontend, UI" },
+        },
+      },
+      aboutMe: {
+        title: "Hakkımda",
+        description1:
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+        description2:
+          "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+      },
+    },
+    projects: {
+      mainTitle: "Projeler",
+      section: {
+        base1: {
+          title: "Rastgele Şakalar",
+          des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+          prog: ["react", "vercel", "axios", "router"],
+          link: {
+            github: {
+              name: "Github'da Görüntüle",
+              url: "https://github.com/JFatih?tab=repositories",
+            },
+            app: { name: "Uygulamaya Git", url: "xyz.com" },
+          },
+          image: "../../src/assets/laptop1.png",
+        },
+        base2: {
+          title: "Sıkıldın mı",
+          des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+          prog: ["react", "redux", "axios", "router", "vercel"],
+          link: {
+            github: { name: "Github'da Görüntüle", url: "" },
+            app: { name: "Uygulamaya Git", url: "xyz.com" },
+          },
+          image: "../../src/assets/laptop2.png",
+        },
+      },
+    },
+    footer: {
+      title: "Bir sonraki projeniz üzerinde birlikte çalışalım",
+      accounts: {
+        github: { name: "Github", link: "xyz.com" },
+        personalBlog: {
+          name: "Kişisel Blog",
+          link: "xyz.com",
+        },
+        linkedin: {
+          name: "Linkedin",
+          link: "xyz.com",
+        },
+        email: { name: "Email", link: "xyz.com" },
+      },
+    },
+  },
 };
