@@ -6,7 +6,7 @@ function Footer() {
     accounts: store.footer.accounts,
   }));
   return (
-    <footer className="w-screen bg-white overflow-hidden relative pt-[50px] pb-[100px] dark:bg-darkbg2 dark:text-white">
+    <footer className="w-screen bg-white overflow-hidden relative pt-[50px] pb-[100px] dark:bg-darkbg2 dark:text-white font-inter">
       <section className="flex md:flex-row flex-col gap-10 justify-center items-center 2xl:w-[1300px] mx-auto">
         <p className="sm:text-[42px] text-[30px] sm:w-[500px] w-9/12 text-end font-medium relative z-[50] ">
           {title}

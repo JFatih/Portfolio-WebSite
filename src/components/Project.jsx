@@ -10,7 +10,7 @@ function Projects() {
   }));
 
   return (
-    <section className="w-screen bg-white overflow-hidden relative dark:bg-darkbg2 dark:text-white">
+    <section className="w-screen bg-white overflow-hidden relative dark:bg-darkbg2 dark:text-white font-inter">
       <header>
         <h1 className="text-[36px] my-[50px] font-medium">{mainTitle}</h1>
       </header>
@@ -21,7 +21,9 @@ function Projects() {
               className={`flex-shrink-0 lg:w-6/12 w-[300px] h-[700px] rounded-xl p-[50px] relative mb-[100px] text-start`}
               key={index}
             >
-              <h5 className="font-bold text-[29px] my-[10px]">{base.title}</h5>
+              <h5 className="font-bold text-[29px] my-[10px] font-playfair">
+                {base.title}
+              </h5>
               <p className="text-[16px] mb-[20px] lg:w-10/12">{base.des}</p>
               <div className="flex gap-2 text-center mb-[20px] flex-wrap lg:w-3/4 items-center">
                 {base.prog.map((pr, index) => {
