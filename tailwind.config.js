@@ -5,7 +5,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        secondColor: "#EA2678",
+        bg1: "#F4F4F4",
+        darkbg1: "#2A262B",
+        darkbg2: "#484148",
+        pink1: "#EA2678",
       },
     },
   },

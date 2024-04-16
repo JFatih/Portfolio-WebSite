@@ -1,6 +1,10 @@
 export const data = {
   en: {
-    language: { name: "TÜRKÇE'YE GEÇ", changedata: "tr" },
+    language: {
+      name: "TÜRKÇE'YE GEÇ",
+      changedata: "tr",
+      specialWords: ["TÜRKÇE"],
+    },
     darkMode1: { on: "DARK MODE", off: "LIGHT MODE" },
     hero: {
       title: "Hi!",
@@ -98,7 +102,11 @@ export const data = {
     },
   },
   tr: {
-    language: { name: "SWITCH TO ENGLISH", changedata: "en" },
+    language: {
+      name: "SWITCH TO ENGLISH",
+      changedata: "en",
+      specialWords: ["ENGLISH"],
+    },
     darkMode1: { on: "KOYU TEMA", off: "AÇIK TEMA" },
     hero: {
       title: "Merhaba!",
