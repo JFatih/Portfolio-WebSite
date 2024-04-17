@@ -1,6 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 import axios from "axios";
+import { toast } from "react-toastify";
+import ReactLoading from "react-loading";
 
 export const userContext = createContext();
 
@@ -32,6 +34,11 @@ export const UserContextProvider = ({ children }) => {
         );
         const apiData = response.data[0].data;
         setData1(apiData);
+        toast(
+          language === "tr"
+            ? "Türkçe Diline Başarıyla Çevrildi"
+            : "Successfully Translated to English"
+        );
         setLoading(false);
       } catch (error) {
         console.error("Veri çekme hatası:", error);
@@ -50,6 +57,16 @@ export const UserContextProvider = ({ children }) => {
     setLanguage(lang);
   };
 
+  const Example = () => (
+    <ReactLoading
+      type="spokes"
+      color={darkMode ? "#F4F4F4" : "#2A262B"}
+      className="text-center"
+      height={400}
+      width={200}
+    />
+  );
+
   return (
     <userContext.Provider
       value={{
@@ -62,7 +79,19 @@ export const UserContextProvider = ({ children }) => {
         data1,
       }}
     >
-      {loading ? <div>Loading...</div> : children}
+      {loading ? (
+        <section
+          className={`w-screen h-screen ${
+            darkMode ? "bg-[#2A262B]" : "bg-[F4F4F4]"
+          }`}
+        >
+          <div className="flex justify-center items-center content-center flex-col h-full pt-40">
+            <Example />
+          </div>
+        </section>
+      ) : (
+        children
+      )}
     </userContext.Provider>
   );
 };

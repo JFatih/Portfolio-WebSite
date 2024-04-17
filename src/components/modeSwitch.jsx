@@ -38,7 +38,7 @@ const ModeSwitch = () => {
   };
 
   return (
-    <div className="my-[4vh] 2xl:w-[1107px] flex lg:justify-end w-8/12 gap-2 mx-auto relative z-50 lg:text-[15px] text-[12px]  text-[#777777] dark:text-[#D9D9D9] justify-center ">
+    <div className="my-[4vh] 2xl:w-8/12 flex lg:justify-end w-9/12 gap-2 mx-auto relative z-50 lg:text-[15px] text-[12px]  text-[#777777] dark:text-[#D9D9D9] justify-center ">
       <label className="relative inline-flex items-center cursor-pointer">
         <input
           type="checkbox"
@@ -60,9 +60,9 @@ const ModeSwitch = () => {
           {darkMode ? data1.darkMode1.on : data1.darkMode1.off}
         </span>
       </label>
-
+      <span>|</span>
       <button onClick={languageHandler}>
-        | {formatText(data1.language.name)}
+        {formatText(data1.language.name)}
       </button>
     </div>
   );
