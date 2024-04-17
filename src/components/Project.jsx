@@ -1,21 +1,20 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { data } from "../mocks/data";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { useSelector } from "react-redux";
+import { useContext } from "react";
+import { userContext } from "../context/userContext";
 
 function Projects() {
-  const { mainTitle, section } = useSelector((store) => ({
-    mainTitle: store.projects.mainTitle,
-    section: store.projects.section,
-  }));
+  const { data1 } = useContext(userContext);
 
   return (
     <section className="w-screen bg-white overflow-hidden relative dark:bg-darkbg2 dark:text-white font-inter">
       <header>
-        <h1 className="text-[36px] my-[50px] font-medium">{mainTitle}</h1>
+        <h1 className="text-[36px] my-[50px] font-medium">
+          {data1.projects.mainTitle}
+        </h1>
       </header>
       <article className="lg:w-4/6 2xl:w-[1070px] w-5/6 mx-auto flex lg:justify-center gap-5 projectsbg lg:overflow-x-hidden overflow-x-scroll">
-        {Object.values(section).map((base, index) => {
+        {Object.values(data1.projects.section).map((base, index) => {
           return (
             <div
               className={`flex-shrink-0 lg:w-6/12 w-[300px] h-[700px] rounded-xl p-[50px] relative mb-[100px] text-start`}

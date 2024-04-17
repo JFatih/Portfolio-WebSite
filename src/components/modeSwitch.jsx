@@ -4,20 +4,20 @@ import { useContext } from "react";
 import { userContext } from "../context/userContext";
 
 const ModeSwitch = () => {
-  const { toggleMode, darkMode, language, changeLang } =
-    useContext(userContext);
+  const { toggleMode, darkMode, changeLang, data1 } = useContext(userContext);
 
   const languageHandler = () => {
-    changeLang(language.changedata);
+    console.log(data1.language.changedata);
+    changeLang(data1.language.changedata);
   };
 
   const formatText = (text) => {
     const trPattern = new RegExp(
-      `(?<=\\b)(${specialWords.join("|")})(?=\\b)`,
+      `(?<=\\b)(${data1.language.specialWords.join("|")})(?=\\b)`,
       "gi"
     );
     const enPattern = new RegExp(
-      `(?<=\\b)(${specialWords.join("|")})(?=\\b)`,
+      `(?<=\\b)(${data1.language.specialWords.join("|")})(?=\\b)`,
       "gi"
     );
     const pattern =
@@ -26,7 +26,7 @@ const ModeSwitch = () => {
         : enPattern;
 
     return text.split(pattern).map((part, index) => {
-      if (specialWords.includes(part.toUpperCase())) {
+      if (data1.language.specialWords.includes(part.toUpperCase())) {
         return (
           <span className={`text-red-500`} key={index}>
             {part}
@@ -56,10 +56,14 @@ const ModeSwitch = () => {
             className="text-[#FFE86E] dark:text-black pr-1"
           />
         </div>
-        <span className="ms-3">{darkMode ? darkMode1.on : darkMode1.off}</span>
+        <span className="ms-3">
+          {darkMode ? data1.darkMode1.on : data1.darkMode1.off}
+        </span>
       </label>
 
-      <button onClick={languageHandler}>| {formatText(language.name)}</button>
+      <button onClick={languageHandler}>
+        | {formatText(data1.language.name)}
+      </button>
     </div>
   );
 };

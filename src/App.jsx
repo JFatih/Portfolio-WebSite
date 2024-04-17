@@ -7,21 +7,8 @@ import Footer from "./components/footer";
 import BgHero from "./components/BgHero";
 import { userContext } from "./context/userContext";
 
-const defaultMode = window.matchMedia("(prefers-color-scheme: dark").matches;
-
-const defaultLanguage = navigator.language;
-
 function App() {
-  const { darkMode, setDarkMode, setLanguage } = useContext(userContext);
-
-  useEffect(() => {
-    if (!localStorage.getItem("DarkMode")) {
-      setDarkMode(defaultMode);
-    }
-    if (!localStorage.getItem("Language")) {
-      setLanguage(defaultLanguage);
-    }
-  }, []);
+  const { darkMode } = useContext(userContext);
 
   return (
     <>

@@ -1,18 +1,25 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import ModeSwitch from "./modeSwitch";
+import { useContext, useEffect } from "react";
+import { userContext } from "../context/userContext";
 
 function BgHero() {
+  const { data1 } = useContext(userContext);
   const formatText = (text) => {
     const trChars = "çğıöşüÇĞİÖŞÜ";
     const enChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     const trPattern = new RegExp(
-      `(?<=\\b|[${trChars}])(${specialWords.join("|")})(?=\\b|[^${trChars}])`,
+      `(?<=\\b|[${trChars}])(${data1.hero.specialWords.join(
+        "|"
+      )})(?=\\b|[^${trChars}])`,
       "gi"
     );
     const enPattern = new RegExp(
-      `(?<=\\b|[${enChars}])(${specialWords.join("|")})(?=\\b|[^${enChars}])`,
+      `(?<=\\b|[${enChars}])(${data1.hero.specialWords.join(
+        "|"
+      )})(?=\\b|[^${enChars}])`,
       "gi"
     );
     const pattern =
@@ -21,7 +28,7 @@ function BgHero() {
         : enPattern;
 
     return text.split(pattern).map((part, index) => {
-      if (specialWords.includes(part)) {
+      if (data1.hero.specialWords.includes(part)) {
         return (
           <span
             className={`text-pink1 ${index === 5 ? "underline" : ""}`}
@@ -34,6 +41,9 @@ function BgHero() {
       return part;
     });
   };
+  useEffect(() => {
+    console.log(data1);
+  }, [data1]);
 
   return (
     <section className="w-screen bg-bg1 overflow-hidden relative dark:bg-darkbg1 font-inter">
@@ -46,11 +56,11 @@ function BgHero() {
         <div className="flex flex-col lg:w-[610px] ">
           <div className="flex flex-col items-start text-start relative ">
             <h2 className="lg:text-[30px] sm:text[18px] text-[#000000] dark:text-[#FFFFFF]">
-              {title} 👋
+              {data1.hero.title} 👋
             </h2>
             <div className="relative">
               <h1 className="lg:text-[42px] sm:text[30px] text-[#0A0A14] dark:text-[#FFFFFF] font-medium mt-3 z-50 relative">
-                {description}
+                {data1.hero.description}
               </h1>
               <span className="absolute rounded-md w-[9vw] h-[1.5vw] bg-pink1 left-[-10px] sm:top-[7.5vh] z-0 top-[28px]"></span>
             </div>
@@ -64,7 +74,7 @@ function BgHero() {
               <FontAwesomeIcon className="w-[34px] h-[36px]" icon={faGithub} />
             </div>
             <p className="lg:text-[18px] text-start sm:w-9/12 mt-3 my-10 relative">
-              {formatText(subDescription)}
+              {formatText(data1.hero.subDescription)}
             </p>
           </footer>
         </div>
