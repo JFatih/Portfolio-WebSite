@@ -1,18 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import ModeSwitch from "./modeSwitch";
-import { useSelector } from "react-redux";
 
-function BgHero({ toogleMode, darkMode, navLan, changeLang }) {
-  const { title, description, subDescription, specialWords } = useSelector(
-    (store) => ({
-      title: store.hero.title,
-      description: store.hero.description,
-      subDescription: store.hero.subDescription,
-      specialWords: store.hero.specialWords,
-    })
-  );
-
+function BgHero() {
   const formatText = (text) => {
     const trChars = "çğıöşüÇĞİÖŞÜ";
     const enChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -47,12 +37,7 @@ function BgHero({ toogleMode, darkMode, navLan, changeLang }) {
 
   return (
     <section className="w-screen bg-bg1 overflow-hidden relative dark:bg-darkbg1 font-inter">
-      <ModeSwitch
-        toogleMode={toogleMode}
-        darkMode={darkMode}
-        navLan={navLan}
-        changeLang={changeLang}
-      />
+      <ModeSwitch />
       <span className="roundcircle border-[55px] border-[#D9D9D9] xl:left-[471px] left-[100px] top-[-40px]"></span>
       <span className="roundcircle w-[218px] h-[60px] bg-pink1 right-[-60px]  bottom-[9vw]"></span>
       <span className="roundcircle border-[60px] border-[#D9D9D9] dark:border-[#525252]  bottom-[-60px] right-[350px]"></span>
