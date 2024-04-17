@@ -85,7 +85,7 @@ function BgHero({ toogleMode, darkMode, navLan, changeLang }) {
         </div>
         <img
           className="lg:w-[341px] w-[250px] shadow-[-18px_-18px_0px_0px_rgba(233,37,119,1)] rounded-[30px] relative"
-          src="../../src/assets/IntroducePhoto.svg"
+          src="https://r.resimlink.com/pqCzQUiBVKyf.png"
         />
       </div>
     </section>
