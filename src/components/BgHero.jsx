@@ -6,6 +6,7 @@ import { userContext } from "../context/userContext";
 
 function BgHero() {
   const { data1 } = useContext(userContext);
+
   const formatText = (text) => {
     const trChars = "çğıöşüÇĞİÖŞÜ";
     const enChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -41,6 +42,7 @@ function BgHero() {
       return part;
     });
   };
+
   useEffect(() => {
     console.log(data1);
   }, [data1]);
