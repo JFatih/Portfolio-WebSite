@@ -23,16 +23,19 @@ export const data = {
       programmes: {
         javascript: {
           name: "JAVASCRIPT",
-          image: "../../src/assets/Programme/Javascript.png",
+          image: "https://r.resimlink.com/SMA0IKbi4gm-.png",
         },
-        react: { name: "REACT", image: "../../src/assets/Programme/REACT.png" },
-        redux: { name: "REDUX", image: "../../src/assets/Programme/REDUX.png" },
-        node: { name: "NODE", image: "../../src/assets/Programme/NODE.png" },
+        react: { name: "REACT", image: "https://r.resimlink.com/vuLH9.png" },
+        redux: { name: "REDUX", image: "https://r.resimlink.com/9XD7i.png" },
+        node: { name: "NODE", image: "https://r.resimlink.com/yniwOG.png" },
         vsCode: {
           name: "VS CODE",
-          image: "../../src/assets/Programme/VS-CODE.png",
+          image: "https://r.resimlink.com/ed68KzF.png",
         },
-        figma: { name: "FIGMA", image: "../../src/assets/Programme/FIGMA.png" },
+        figma: {
+          name: "FIGMA",
+          image: "https://r.resimlink.com/4mVxi5vKj3Tu.png",
+        },
       },
     },
     profile: {
