@@ -1,11 +1,8 @@
-import { useSelector } from "react-redux";
-import { data } from "../mocks/data";
+import { useContext } from "react";
+import { userContext } from "../context/userContext";
 
 function Skills() {
-  const { title, programmes } = useSelector((store) => ({
-    title: store.skills.title,
-    programmes: store.skills.programmes,
-  }));
+  const { data1 } = useContext(userContext);
   return (
     <>
       <section className="w-screen bg-white overflow-hidden relative dark:bg-darkbg2">
@@ -15,9 +12,11 @@ function Skills() {
         <span className="roundcircle border-[40px] border-white dark:border-darkbg2  bottom-[-70px] right-[-15px]"></span>
         <span className="roundcircle w-[218px] h-[60px] bg-[#525252]  left-[-100px] bottom-[50px]"></span>
         <div>
-          <p className="text-[48px] my-[5vh] dark:text-bg1 relative">{title}</p>
+          <p className="text-[48px] my-[5vh] dark:text-bg1 relative">
+            {data1.skills.title}
+          </p>
           <div className="flex flex-row flex-wrap  items-center	 gap-[20px] justify-center mb-[10vh] relative ">
-            {Object.values(programmes).map((program, index) => {
+            {Object.values(data1.skills.programmes).map((program, index) => {
               return (
                 <div key={index}>
                   <img src={program.image} />

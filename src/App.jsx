@@ -1,49 +1,38 @@
-import { useEffect } from "react";
+import { useContext } from "react";
 import "./App.css";
 import Profile from "./components/Profile";
 import Projects from "./components/Project";
 import Skills from "./components/Skills";
 import Footer from "./components/footer";
-import useLocalStorage from "./hooks/useLocalStorage";
 import BgHero from "./components/BgHero";
-
-const defaultMode = window.matchMedia("(prefers-color-scheme: dark").matches;
-
-const defaultLanguage = navigator.language;
+import { userContext } from "./context/userContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const [darkMode, setDarkMode] = useLocalStorage("DarkMode", defaultMode);
-  const [navLan, setNavLan] = useLocalStorage("Language", defaultLanguage);
+  const { darkMode } = useContext(userContext);
 
-  useEffect(() => {
-    if (!localStorage.getItem("DarkMode")) {
-      setDarkMode(defaultMode);
-    }
-    if (!localStorage.getItem("Language")) {
-      setNavLan(defaultLanguage);
-    }
-  }, []);
-
-  const toogleMode = () => {
-    setDarkMode(!darkMode);
-  };
-
-  const changeLang = (lang) => {
-    setNavLan(lang);
-  };
   return (
     <>
       <div className={darkMode ? "dark" : ""}>
-        <BgHero
-          toogleMode={toogleMode}
-          darkMode={darkMode}
-          navLan={navLan}
-          changeLang={changeLang}
-        />
+        <BgHero />
         <Skills />
         <Profile />
         <Projects />
         <Footer />
+        <ToastContainer
+          position="bottom-center"
+          autoClose={600}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme={darkMode ? "dark" : "light"}
+          limit={2}
+        />
       </div>
     </>
   );
