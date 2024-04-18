@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 import axios from "axios";
-import { toast } from "react-toastify";
+
 import ReactLoading from "react-loading";
 
 export const userContext = createContext();
@@ -33,11 +33,7 @@ export const UserContextProvider = ({ children }) => {
         );
         const apiData = response.data[0].data;
         setData1(apiData);
-        toast(
-          language === "tr"
-            ? "Türkçe Diline Başarıyla Çevrildi"
-            : "Successfully Translated to English"
-        );
+
         setLoading(false);
       } catch (error) {
         console.error("Veri çekme hatası:", error);
@@ -52,7 +48,6 @@ export const UserContextProvider = ({ children }) => {
   };
 
   const changeLang = (lang) => {
-    console.log("2");
     setLanguage(lang);
   };
 

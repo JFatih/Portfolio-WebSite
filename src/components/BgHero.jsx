@@ -53,14 +53,14 @@ function BgHero() {
       <div className="lg:w-8/12 w-9/12 2xl:w-[1107px] flex lg:gap-5 justify-center items-center mx-auto dark:text-[#FFFFFF] mb-[6vw] xl:flex-row flex-col-reverse mt-[6vw] gap-4">
         <div className="flex flex-col lg:w-[650px] ">
           <div className="flex flex-col items-start text-start relative ">
-            <h2 className="lg:text-[30px] sm:text[18px] text-[#000000] dark:text-[#FFFFFF]">
+            <p className="lg:text-[30px] sm:text[18px] text-[#000000] dark:text-[#FFFFFF]">
               {data1.hero.title} 👋
-            </h2>
+            </p>
             <div className="relative">
-              <h1 className="lg:text-[42px] text[30px] text-[#0A0A14] dark:text-[#FFFFFF] font-medium mt-3 z-50 relative">
+              <p className="lg:text-[42px] text[30px] text-[#0A0A14] dark:text-[#FFFFFF] font-medium mt-3 z-50 relative">
                 {data1.hero.description}
                 <span className="absolute rounded-md lg:w-[150px] lg:h-[20px] w-[60px] h-[10px] bg-pink1 left-[-10px] lg:top-[40px]  z-[-1] top-[15px]"></span>
-              </h1>
+              </p>
             </div>
           </div>
           <footer className="flex flex-col items-start my-10">

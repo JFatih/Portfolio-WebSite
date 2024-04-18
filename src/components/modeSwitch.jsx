@@ -2,13 +2,19 @@ import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
 import { userContext } from "../context/userContext";
+import { toast } from "react-toastify";
 
 const ModeSwitch = () => {
-  const { toggleMode, darkMode, changeLang, data1 } = useContext(userContext);
+  const { toggleMode, darkMode, changeLang, data1, language } =
+    useContext(userContext);
 
   const languageHandler = () => {
-    console.log(data1.language.changedata);
     changeLang(data1.language.changedata);
+    toast(
+      language === "tr"
+        ? "Türkçe Diline Başarıyla Çevrildi"
+        : "Successfully Translated to English"
+    );
   };
 
   const formatText = (text) => {
