@@ -26,7 +26,6 @@ export const UserContextProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    console.log("Dil değişti");
     const fetchData = async () => {
       try {
         const response = await axios.get(
