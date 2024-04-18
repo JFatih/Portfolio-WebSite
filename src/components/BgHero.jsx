@@ -59,7 +59,7 @@ function BgHero() {
             <div className="relative">
               <p className="lg:text-[42px] text[30px] text-[#0A0A14] dark:text-[#FFFFFF] font-medium mt-3 z-50 relative">
                 {data1.hero.description}
-                <span className="absolute rounded-md lg:w-[150px] lg:h-[20px] w-[60px] h-[10px] bg-pink1 left-[-10px] lg:top-[40px]  z-[-1] top-[15px]"></span>
+                <span className="absolute rounded-md lg:w-[150px] lg:h-[20px] w-[80px] h-[10px] bg-pink1 left-[-10px] lg:top-[40px]  z-[-1] top-[15px]"></span>
               </p>
             </div>
           </div>
