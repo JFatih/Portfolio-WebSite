@@ -8,7 +8,12 @@ export const userContext = createContext();
 
 const defaultMode = window.matchMedia("(prefers-color-scheme: dark").matches;
 
-const defaultLanguage = navigator.language;
+const defaultLanguage =
+  navigator.language === "tr" || navigator.language === "tr-TR"
+    ? "tr"
+    : navigator.language === "en" || navigator.language === "en-EN"
+    ? "en"
+    : "en";
 
 export const UserContextProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useLocalStorage("DarkMode", defaultMode);
