@@ -1,14 +1,19 @@
 import { createContext, useEffect, useState } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 import axios from "axios";
-import { toast } from "react-toastify";
+
 import ReactLoading from "react-loading";
 
 export const userContext = createContext();
 
 const defaultMode = window.matchMedia("(prefers-color-scheme: dark").matches;
 
-const defaultLanguage = navigator.language;
+const defaultLanguage =
+  navigator.language === "tr" || navigator.language === "tr-TR"
+    ? "tr"
+    : navigator.language === "en" || navigator.language === "en-EN"
+    ? "en"
+    : "en";
 
 export const UserContextProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useLocalStorage("DarkMode", defaultMode);
@@ -26,7 +31,6 @@ export const UserContextProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    console.log("Dil değişti");
     const fetchData = async () => {
       try {
         const response = await axios.get(
@@ -34,11 +38,7 @@ export const UserContextProvider = ({ children }) => {
         );
         const apiData = response.data[0].data;
         setData1(apiData);
-        toast(
-          language === "tr"
-            ? "Türkçe Diline Başarıyla Çevrildi"
-            : "Successfully Translated to English"
-        );
+
         setLoading(false);
       } catch (error) {
         console.error("Veri çekme hatası:", error);
@@ -53,7 +53,6 @@ export const UserContextProvider = ({ children }) => {
   };
 
   const changeLang = (lang) => {
-    console.log("2");
     setLanguage(lang);
   };
 

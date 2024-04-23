@@ -17,7 +17,7 @@ function Projects() {
         {Object.values(data1.projects.section).map((base, index) => {
           return (
             <div
-              className={`flex-shrink-0 lg:w-6/12 w-[300px] h-[700px] rounded-xl p-[50px] relative mb-[100px] text-start`}
+              className={`flex-shrink-0 lg:w-6/12 w-[300px] xl:h-[700px] h-[800px] rounded-xl p-[50px] relative mb-[100px] text-start`}
               key={index}
             >
               <h5 className="font-bold text-[29px] my-[10px] font-playfair">
@@ -36,7 +36,7 @@ function Projects() {
                   );
                 })}
               </div>
-              <div className="text-[20px] font-semibold flex justify-between mb-[20px] ">
+              <div className="text-[20px] font-semibold flex lg:justify-between lg:flex-row flex-col gap-3 mb-[20px] ">
                 <a href={base.link.github.url}>{base.link.github.name}</a>
                 <a href={base.link.app.url}>
                   {base.link.app.name}{" "}
