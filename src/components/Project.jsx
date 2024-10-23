@@ -75,7 +75,7 @@ function Projects() {
                     </div>
                   </div>
                   <div className="bottom-[-28px] relative">
-                    <img src="././public/PcSample.png" className="relative" />
+                    <img src="public/PcSample.png" className="relative" />
                     <img
                       src={base.image}
                       className="absolute top-[-18px] lg:top-[-28px] scale-[0.7]"
