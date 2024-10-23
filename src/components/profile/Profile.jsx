@@ -9,8 +9,6 @@ function Profile() {
     document.querySelector("dialog").showModal();
   };
 
-  console.log(data1.profile.maintitle);
-
   return (
     <section className="w-screen bg-bg1 overflow-hidden relative dark:bg-darkbg1 dark:text-white font-inter py-[5vh]">
       <span className="roundcircle border-[60px] border-pink1 dark:border-pink1  top-[-30px] right-[-35px]"></span>

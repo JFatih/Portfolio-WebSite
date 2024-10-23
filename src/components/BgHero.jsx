@@ -6,7 +6,6 @@ import { userContext } from "../context/userContext";
 
 function BgHero() {
   const { data1 } = useContext(userContext);
-  console.log(data1);
   const formatText = (text) => {
     const trChars = "çğıöşüÇĞİÖŞÜ";
     const enChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
