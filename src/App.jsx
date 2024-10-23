@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./App.css";
-import Profile from "./components/Profile";
+import Profile from "./components/profile/Profile";
 import Projects from "./components/Project";
 import Skills from "./components/Skills";
 import Footer from "./components/footer";
@@ -19,6 +19,7 @@ function App() {
         <Skills />
         <Profile />
         <Projects />
+
         <Footer />
         <ToastContainer
           position="bottom-center"

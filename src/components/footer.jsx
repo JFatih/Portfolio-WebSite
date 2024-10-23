@@ -10,7 +10,7 @@ function Footer() {
           {data1.footer.title}
           <span className="absolute rounded-md lg:w-[250px] w-[180px] lg:h-[18px] h-[10px] bg-[#82BBFF] sm:top-[40px] top-[30px] sm:right-[50px] right-[10px] z-[-1]"></span>
         </p>
-        <div className="flex md:flex-col md:gap-0 text-start gap-2 text-[24px] footerlinkbg flex-wrap justify-center">
+        <div className="flex md:flex-col md:gap-0 text-start gap-2 text-[24px] footerlinkbg flex-wrap justify-center px-10 md:px-0">
           {Object.values(data1.footer.accounts).map((data, index) => {
             return (
               <a href={data.link} key={index} className="font-medium">

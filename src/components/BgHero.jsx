@@ -6,7 +6,7 @@ import { userContext } from "../context/userContext";
 
 function BgHero() {
   const { data1 } = useContext(userContext);
-
+  console.log(data1);
   const formatText = (text) => {
     const trChars = "çğıöşüÇĞİÖŞÜ";
     const enChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -46,6 +46,7 @@ function BgHero() {
   return (
     <section className="w-screen bg-bg1 overflow-hidden relative dark:bg-darkbg1 font-inter">
       <ModeSwitch />
+
       <span className="roundcircle border-[55px] border-[#D9D9D9] xl:left-[471px] sm:left-[100px] left-[-40px] top-[-40px]"></span>
       <span className="roundcircle w-[218px] h-[60px] bg-pink1 right-[-60px]  bottom-[9vw]"></span>
       <span className="roundcircle border-[60px] border-[#D9D9D9] dark:border-[#525252]  bottom-[-60px] right-[350px]"></span>
