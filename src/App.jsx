@@ -8,6 +8,7 @@ import BgHero from "./components/BgHero";
 import { userContext } from "./context/userContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Experience from "./components/Experience";
 
 function App() {
   const { darkMode } = useContext(userContext);
@@ -19,7 +20,7 @@ function App() {
         <Skills />
         <Profile />
         <Projects />
-
+        <Experience />
         <Footer />
         <ToastContainer
           position="bottom-center"
