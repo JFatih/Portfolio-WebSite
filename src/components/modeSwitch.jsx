@@ -44,7 +44,7 @@ const ModeSwitch = () => {
   };
 
   return (
-    <div className="my-[4vh] 2xl:w-8/12 flex lg:justify-between lg:flex-row w-9/12 gap-2 mx-auto relative z-50 lg:text-[15px] text-[12px]  text-[#777777] dark:text-[#D9D9D9] flex-col-reverse justify-center items-center">
+    <div className="2xl:w-[1107px] my-[4vh]  flex lg:justify-between lg:flex-row w-9/12 gap-2 mx-auto relative z-50 lg:text-[15px] text-[12px]  text-[#777777] dark:text-[#D9D9D9] flex-col-reverse justify-center items-center">
       <a
         href="https://drive.google.com/file/d/1yqKAsbGGU-CMD1dYay-FUHgSvmTojVOd/view?usp=sharing"
         className=" rounded-full py-1 px-3 bg-pink1 dark:bg-[#D9D9D9] dark:text-pink1 text-white font-semibold"
